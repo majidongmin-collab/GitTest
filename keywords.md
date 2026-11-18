@@ -78,7 +78,7 @@ public class GameManager
     private static GameManager instance;
     public static GameManager Instance => instance ??= new GameManager();
 
-    private GameManager() { }   // 외부 생성 차단
+    private GameManager() { } 
 }
 ```
 
