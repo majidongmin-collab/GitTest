@@ -48,7 +48,7 @@ switch (hp)
 ```csharp
 class Player
 {
-    private IWeapon weapon;                         // 추상화에 의존
+    private IWeapon weapon;                         
     public Player(IWeapon weapon) { this.weapon = weapon; }
 }
 ```
@@ -61,8 +61,8 @@ class Player
 **장점**: 결합도 감소, 테스트할 때 가짜 객체로 교체 쉬움
 
 ```csharp
-var player = new Player(new Sword());   // 외부에서 주입
-var player2 = new Player(new Bow());    // 코드 수정 없이 교체``
+var player = new Player(new Sword());  
+var player2 = new Player(new Bow());    
 ```
 
 
@@ -130,8 +130,8 @@ interface IState
     void Exit();
 }
 
-class IdleState : IState { /* 대기 동작 */ }
-class RunState : IState { /* 달리기 동작 */ }
+class IdleState : IState 
+class RunState : IState 
 
 class Player
 {
